@@ -6,12 +6,29 @@ class Vector3d{
 		
 		Vector3d(float x = 0, float y = 0, float z = 0) : x(x), y(y), z(z) {}
 
-        float produto_escalar() {}
+        float produto_escalar(const Vector3d& outro)const {
+		return x*outro.x + y*outro.y + z*outro.z;
+	}
 
-        Vector3d produto_vetorial() {}
+        Vector3d produto_vetorial(const Vector3d outro)const {
+		return Vector3d(y*outro.z - outro.y*z, outro.x*z - x*outro.z, x*outro.y - outro.x*y);
+	}
 
         Vector3d operator+ (const Vector3d&v) {
             return Vector3d(x+v.x, y+v.y, z+v.z);
+        }
+
+        Vector3d operator- (const Vector3d&v) {
+            return Vector3d(x-v.x, y-v.y, z-v.z);
+        }
+
+        Vector3d operator* (float escalar) {
+            return Vector3d(x*escalar, y*escalar, z*escalar);
+        }
+
+        Vector3d operator/ (float escalar) {
+            if (escalar == 0) return Vector3d(0,0,0);
+            return Vector3d(x/escalar, y/escalar, z/escalar);
         }
 
         float modulo() {
@@ -31,11 +48,19 @@ class Ponto3d {
 		Ponto3d(float x = 0, float y = 0, float z = 0) : x(x), y(y), z(z) {}
 		
 		float distancia_pontos(const Ponto3d& ponto)const{
-			float dx = ponto.x - x;
-			float dy = ponto.y - y;
+			float dx = ponto.x - x; 
+			float dy = ponto.y - y; 
 			float dz = ponto.z - z;
 			
 			return sqrt(dx*dx + dy*dy + dz*dz); 
+		}
+
+		float distancia_quadrada(const Ponto3d& ponto)const{
+			float dx = ponto.x -x; 
+			float dy = ponto.y-y; 
+			float dz = ponto.z-z;
+
+			return (dx*dx+dy*dy+dz*dz);
 		}
 		
 		Vector3d diferenca_pontos(const Ponto3d& ponto)const{
@@ -66,7 +91,7 @@ class Camera {
         Vector3d U, V, W, Up;
         float dist;
         int h_res, w_res;
-}
+};
 
 int main() {
 
