@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cmath>
+#include <fstream>
 
-#define HEIGHT_RES 120
-#define WIDTH_RES 80
+#define HEIGHT_RES 200
+#define WIDTH_RES 200
 
 class Vector3d{
 	public:
@@ -113,17 +114,17 @@ class Camera {
         float dist;
         Vector3d direcao;
 
-        Camera(Ponto3d pos, Ponto3d mira, float dist) : C(pos), M(mira) {
+        Camera(Ponto3d pos, Ponto3d mira, float dist) : C(pos), M(mira), dist(dist) {
             direcao = M-C;
             W = direcao.normalizacao()*(-1); //Eixo Z
             U = Up.produto_vetorial(W).normalizacao(); //Eixo X
             V = W.produto_vetorial(U); //Eixo Y
         }
 
-        Ray generate_ray(int i, int j) const {
+        Ray generate_ray(int row, int col) const {
         // Mapeia o pixel para coordenadas -0.5 a 0.5
-        float u = (j - WIDTH_RES / 2.0f) / WIDTH_RES;
-        float v = (HEIGHT_RES / 2.0f - i) / HEIGHT_RES; // Invertemos o i para o Y crescer para cima
+        float u = (col - WIDTH_RES / 2.0f) / WIDTH_RES;
+        float v = (HEIGHT_RES / 2.0f - row) / HEIGHT_RES; // Invertemos o i para o Y crescer para cima
 
         // Direção: combinação dos eixos U, V e a distância focal em W
         Vector3d dir = (U * u + V * v - W * dist);
@@ -137,7 +138,7 @@ public:
     float   radius;
     float R, G, B; //ajeitar RGB
 
-    Esfera(Ponto3d c, float r) : center(c), radius(r) {}
+    Esfera(Ponto3d c, float r, float R, float G, float B) : center(c), radius(r), R(R), G(G), B(B) {}
 
     // retorna t > 0 se houver interseção, -1 caso contrário
     float intersect(const Ray& ray) const {
@@ -158,7 +159,7 @@ public:
 };
 
 void renderizar(const Camera& cam, const Esfera& esfera) {
-    std::ofstream file("imagem.ppm");
+    std::ofstream file("out.ppm");
     file << "P3\n" << WIDTH_RES << " " << HEIGHT_RES << "\n255\n";
 
     for (int i = 0; i < HEIGHT_RES; i++) {
@@ -168,23 +169,23 @@ void renderizar(const Camera& cam, const Esfera& esfera) {
             
             // 2. Testa colisão
             if (esfera.intersect(ray) > 0.0f) {
-                file << esfera.r << " " << esfera.g << " " << esfera.b << " ";
+                file << esfera.R << " " << esfera.G << " " << esfera.B << " ";
             } else {
                 file << "0 0 0 "; // Fundo preto
             }
+            file << "\n";
         }
-        file << "\n";
     }
     file.close();
 }
 
 int main() {
     // Câmera na origem olhando para -Z
-    Camera cam(Ponto3d(0,0,0), Ponto3d(0,0,-1), 1.0f);
+    Camera cam(Ponto3d(2,3,2), Ponto3d(0,0,-1), 1.0f);
     
     // Esfera vermelha no centro, recuada 5 unidades
     Esfera bola(Ponto3d(0,0,-5), 2.0f, 255, 0, 0);
 
-    render_to_ppm(cam, bola);
+    renderizar(cam, bola);
     return 0;
 }
