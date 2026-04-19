@@ -2,8 +2,8 @@
 #include <cmath>
 #include <fstream>
 
-#define HEIGHT_RES 200
-#define WIDTH_RES 200
+#define HEIGHT_RES 400
+#define WIDTH_RES 400
 
 class Vector3d{
 	public:
@@ -113,23 +113,22 @@ class Camera {
         Vector3d Up = Vector3d(0, 1, 0);
         float dist;
         Vector3d direcao;
+        float aspect_ratio; 
 
         Camera(Ponto3d pos, Ponto3d mira, float dist) : C(pos), M(mira), dist(dist) {
+            aspect_ratio = (float)WIDTH_RES / HEIGHT_RES; 
             direcao = M-C;
-            W = direcao.normalizacao()*(-1); //Eixo Z
-            U = Up.produto_vetorial(W).normalizacao(); //Eixo X
-            V = W.produto_vetorial(U); //Eixo Y
+            W = direcao.normalizacao()*(-1);
+            U = Up.produto_vetorial(W).normalizacao();
+            V = W.produto_vetorial(U);
         }
 
         Ray generate_ray(int row, int col) const {
-        // Mapeia o pixel para coordenadas -0.5 a 0.5
-        float u = (col - WIDTH_RES / 2.0f) / WIDTH_RES;
-        float v = (HEIGHT_RES / 2.0f - row) / HEIGHT_RES; // Invertemos o i para o Y crescer para cima
-
-        // Direção: combinação dos eixos U, V e a distância focal em W
-        Vector3d dir = (U * u + V * v - W * dist);
-        return Ray(C, dir);
-    }
+            float u = ((col + 0.5f) / WIDTH_RES - 0.5f) * aspect_ratio;
+            float v = 0.5f - (row + 0.5f) / HEIGHT_RES;
+            Vector3d dir = U * u + V * v - W * dist;
+            return Ray(C, dir);
+        }
 };
 
 class Esfera {
@@ -158,34 +157,66 @@ public:
     }
 };
 
-void renderizar(const Camera& cam, const Esfera& esfera) {
+class Plano {
+public:
+    Ponto3d point;
+    Vector3d normal;
+    int R, G, B;
+    
+    Plano(Ponto3d p, Vector3d n, int R, int G, int B) 
+        : point(p), normal(n.normalizacao()), R(R), G(G), B(B) {}
+    
+    float intersect(const Ray& ray) const {
+        float denom = ray.direction.produto_escalar(normal);
+        
+        if (std::abs(denom) < 1e-6) return -1.0f; //Epsilon pra evitar problema com 0
+        
+        Vector3d p0_minus_origin = point - ray.origin;
+        float t = p0_minus_origin.produto_escalar(normal) / denom;
+        
+        if (t < 0.001f) return -1.0f; // Epsilon
+        
+        return t;
+    }
+};
+
+void renderizar(const Camera& cam, const Esfera& esfera, const Plano& plano) {
     std::ofstream file("out.ppm");
     file << "P3\n" << WIDTH_RES << " " << HEIGHT_RES << "\n255\n";
-
     for (int i = 0; i < HEIGHT_RES; i++) {
         for (int j = 0; j < WIDTH_RES; j++) {
-            // 1. Gera o raio para este pixel
             Ray ray = cam.generate_ray(i, j);
             
-            // 2. Testa colisão
-            if (esfera.intersect(ray) > 0.0f) {
-                file << esfera.R << " " << esfera.G << " " << esfera.B << " ";
-            } else {
-                file << "0 0 0 "; // Fundo preto
+            float t_esfera = esfera.intersect(ray);
+            float t_plano = plano.intersect(ray);
+            
+            if (t_esfera > 0 && (t_plano < 0 || t_esfera < t_plano)) {
+                file << (int)esfera.R << " " << (int)esfera.G << " " << (int)esfera.B << " ";
+            } 
+            else if (t_plano > 0) {
+                file << (int)plano.R << " " << (int)plano.G << " " << (int)plano.B << " ";
             }
-            file << "\n";
+            else {
+                file << "0 0 0 ";
+            }
         }
+        file << "\n";
     }
     file.close();
 }
 
-int main() {
-    // Câmera na origem olhando para -Z
-    Camera cam(Ponto3d(2,3,2), Ponto3d(0,0,-1), 1.0f);
-    
-    // Esfera vermelha no centro, recuada 5 unidades
-    Esfera bola(Ponto3d(0,0,-5), 2.0f, 255, 0, 0);
 
-    renderizar(cam, bola);
+int main() {
+    // Câmera em (0, 1, 5) olhando para a origem (0, 0, 0)
+    Camera cam(Ponto3d(0, 1, 5), Ponto3d(0, 0, 0), 1.0f);
+    
+    // Esfera vermelha no centro
+    Esfera bola(Ponto3d(0, 0, 0), 1.0f, 255, 0, 0);
+    
+    // Plano cinza abaixo da esfera
+    Plano chao(Ponto3d(0, -1, 0), Vector3d(0, 1, 0), 150, 120, 120);
+
+    renderizar(cam, bola, chao);
     return 0;
 }
+
