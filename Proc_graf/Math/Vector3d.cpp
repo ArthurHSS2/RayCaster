@@ -44,15 +44,15 @@ Vector3d Vector3d::normalizacao() const
 
 double Vector3d::get_x() const
 {
-    return (*this).x;
+    return x;
 }
 
 double Vector3d::get_y() const
 {
-    return (*this).y;
+    return y;
 }
 
 double Vector3d::get_z() const
 {
-    return (*this).z;
+    return z;
 }
