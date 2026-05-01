@@ -25,7 +25,7 @@ Vector3d Point3d::diferenca_pontos(const Point3d& ponto) const{
 }
 
 Point3d Point3d::operator+ (const Vector3d&v) const { 
-    return Point3d(x+v.get_x(), y+v.get_y(), z+v.get_z()); // soma ponto + vetor
+    return Point3d(x+v.x, y+v.y, z+v.z); // soma ponto + vetor
 } 
 
 Point3d Point3d::operator* (const double&k) const {

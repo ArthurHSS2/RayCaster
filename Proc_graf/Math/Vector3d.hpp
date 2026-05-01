@@ -7,9 +7,9 @@
 
 class Vector3d
 {
-    double x, y, z;
+    public:
+        double x, y, z;
 
-	public:
 		Vector3d(double x = 0, double y = 0, double z = 0) : x(x), y(y), z(z) {}
 
         double produto_escalar(const Vector3d& outro)const;
@@ -27,12 +27,6 @@ class Vector3d
         double modulo()const;
 
         Vector3d normalizacao()const;
-
-        double get_x()const;
-
-        double get_y()const;
-
-        double get_z()const;
 };
 
 #endif
