@@ -1,6 +1,6 @@
 #include "Camera.hpp"
 
-Camera::Camera(Point3d pos, Point3d mira, Vector3d Up, double dist, int width, int height) : C(pos), M(mira), Up(Up), dist(dist), width(width), height(height)
+Camera::Camera(Point3d pos, Point3d mira, Vector3d Up, double dist, int height, int width) : C(pos), M(mira), Up(Up), dist(dist), height(height), width(width)
 {
     aspect_ratio = (double)width / height; 
     direcao = M-C;

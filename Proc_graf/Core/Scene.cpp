@@ -1,20 +1,14 @@
 // Scene.cpp
 #include "Scene.hpp"
-#include "Shape.hpp"
-#include "Sphere.hpp"
-#include "Plane.hpp"
-#include "Vector3d.hpp"
-#include "Point3d.hpp"
-
 
 Scene::Scene(SceneData scene) : scene(std::move(scene)) {
-    Shapes = get_shapes(this->scene);
+    shapes = get_shapes(this->scene);
 }
 
 
-std::unique_ptr<Shape> Scene::create_sphere(const SceneObject& obj, const ColorData& color) {
+std::unique_ptr<Shape> Scene::create_sphere(const ObjectData& obj, const ColorData& color) {
     Vetor centerVec = obj.vetorPointData.at("center");
-    Ponto3d center(centerVec.getX(), centerVec.getY(), centerVec.getZ());
+    Point3d center(centerVec.getX(), centerVec.getY(), centerVec.getZ());
     double radius = obj.numericData.at("radius");
     
     return std::make_unique<Sphere>(  
@@ -23,11 +17,11 @@ std::unique_ptr<Shape> Scene::create_sphere(const SceneObject& obj, const ColorD
     );
 }
 
-std::unique_ptr<Shape> Scene::create_plane(const SceneObject& obj, const ColorData& color) {
+std::unique_ptr<Shape> Scene::create_plane(const ObjectData& obj, const ColorData& color) {
     Vetor pointVec = obj.vetorPointData.at("point_on_plane");
     Vetor normalVec = obj.vetorPointData.at("normal");
-    Ponto3d point(pointVec.getX(), pointVec.getY(), pointVec.getZ());
-    Vetor normal(normalVec.getX(), normalVec.getY(), normalVec.getZ());
+    Point3d point(pointVec.getX(), pointVec.getY(), pointVec.getZ());
+    Vector3d normal(normalVec.getX(), normalVec.getY(), normalVec.getZ());
     
     return std::make_unique<Plane>(  
         point, normal,
@@ -35,7 +29,7 @@ std::unique_ptr<Shape> Scene::create_plane(const SceneObject& obj, const ColorDa
     );
 }
 
-std::unique_ptr<Shape> Scene::create_mesh(const SceneObject& obj, const ColorData& color) {
+std::unique_ptr<Shape> Scene::create_mesh(const ObjectData& obj, const ColorData& color) {
     
     
     return nullptr;

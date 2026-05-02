@@ -41,18 +41,3 @@ Vector3d Vector3d::normalizacao() const
     double mod = (*this).modulo();
     return Vector3d(x/mod, y/mod, z/mod);
 }
-
-double Vector3d::get_x() const
-{
-    return x;
-}
-
-double Vector3d::get_y() const
-{
-    return y;
-}
-
-double Vector3d::get_z() const
-{
-    return z;
-}

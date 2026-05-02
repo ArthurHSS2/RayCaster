@@ -1,9 +1,8 @@
+#ifndef VECTOR3D_H
+#define VECTOR3D_H
+
 #include <cmath>
 #include <iostream>
-
-#ifndef VECTOR3D_H
-
-#define VECTOR3D_H
 
 class Vector3d
 {

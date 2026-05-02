@@ -1,8 +1,7 @@
-#include "../Math/Point3d.hpp"
-
 #ifndef RAY_H
-
 #define RAY_H
+
+#include "../Math/Point3d.hpp"
 
 class Ray {
     Point3d origin;
