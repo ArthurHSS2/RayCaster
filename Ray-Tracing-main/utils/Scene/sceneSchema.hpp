@@ -95,9 +95,9 @@ static void indent(ostream& os){ for (int i = 0; i < IdentSpacing; i++) os << " 
 static void printAsArray(ostream& os, Vetor v) { os << "[" << v.getX() << ", " << v.getY() << ", " << v.getZ() << "]"; }
 static void printAsArray(ostream& os, Ponto v) { os << "[" << v.getX() << ", " << v.getY() << ", " << v.getZ() << "]"; }
 
-ostream& operator<<(ostream& os, const ColorData& c) { return os << "[" << c.r << ", " << c.g << ", " << c.b << "]"; }
+inline ostream& operator<<(ostream& os, const ColorData& c) { return os << "[" << c.r << ", " << c.g << ", " << c.b << "]"; }
 
-ostream& operator<<(ostream& os, const TransformData& t) {
+inline ostream& operator<<(ostream& os, const TransformData& t) {
     indent(os); os << "{\n"; IdentSpacing++;
 
     indent(os); os << "\"type\": \"" << t.tType << "\",\n";
@@ -107,7 +107,7 @@ ostream& operator<<(ostream& os, const TransformData& t) {
     return os << "}";
 }
 
-ostream& operator<<(ostream& os, const MaterialData& m) {
+inline ostream& operator<<(ostream& os, const MaterialData& m) {
     indent(os); os << "{\n"; IdentSpacing++;
     indent(os); os << "\"name\": \"" << m.name << "\",\n";
     indent(os); os << "\"color\": " << m.color << ",\n";
@@ -123,7 +123,7 @@ ostream& operator<<(ostream& os, const MaterialData& m) {
 }
 
 
-ostream& operator<<(ostream& os, const LightData& l) {
+inline ostream& operator<<(ostream& os, const LightData& l) {
     indent(os); os << "{\n"; IdentSpacing++;
     auto extraData = l.extraData;
 
@@ -142,7 +142,7 @@ ostream& operator<<(ostream& os, const LightData& l) {
 }
 
 
-ostream& operator<<(ostream& os, const ObjectData& obj) {
+inline ostream& operator<<(ostream& os, const ObjectData& obj) {
     os << "{\n"; IdentSpacing++;
 
     indent(os); os << "\"type\": \""     << obj.objType << "\",\n";
@@ -187,7 +187,7 @@ ostream& operator<<(ostream& os, const ObjectData& obj) {
 }
 
 
-ostream& operator<<(ostream& os, const CameraData& c) {
+inline ostream& operator<<(ostream& os, const CameraData& c) {
     indent(os); os << "{\n"; IdentSpacing++;
     
     indent(os); os << "\"lookfrom\": "; printAsArray(os, c.lookfrom); os << ",\n";
@@ -203,7 +203,7 @@ ostream& operator<<(ostream& os, const CameraData& c) {
 }
 
 
-ostream& operator<<(ostream& os, const SceneData& s) {
+inline ostream& operator<<(ostream& os, const SceneData& s) {
     indent(os); os << "{\n"; IdentSpacing++;
 
     indent(os); os << "\"camera\": " << s.camera << ",\n";

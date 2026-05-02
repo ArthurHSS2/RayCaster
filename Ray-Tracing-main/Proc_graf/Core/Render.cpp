@@ -1,7 +1,9 @@
 #include "Render.hpp"
+#include <filesystem>
 
 void Render::renderize(const Camera& cam, const Scene& cena) {
-    std::ofstream file("../out.ppm");
+    std::ofstream file("out.ppm");
+    std::cout << std::filesystem::current_path() << std::endl;
     file << "P3\n" << cam.width << " " << cam.height << "\n255\n";
     
     // Render loop

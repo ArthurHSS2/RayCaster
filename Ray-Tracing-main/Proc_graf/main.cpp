@@ -1,7 +1,7 @@
 #include "Core/Render.hpp"
 
 int main() {
-    SceneData sceneparser = SceneJsonLoader::loadFile("../utils/input/caso5.json");
+    SceneData sceneparser = SceneJsonLoader::loadFile("Ray-Tracing-main/utils/input/caso5.json");
     Scene scene(sceneparser);
     Render render;
 
@@ -20,6 +20,8 @@ int main() {
     Camera cam(lookfrom, lookat, up, sceneparser.camera.screen_distance, sceneparser.camera.image_height, sceneparser.camera.image_width);
 
     render.renderize(cam, scene);
+
+
 
     return 0;
 }
