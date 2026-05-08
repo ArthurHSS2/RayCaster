@@ -1,0 +1,74 @@
+[
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\main.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\main.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/main.cpp",
+  "output": "CMakeFiles/RayTracer.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Core\\Camera.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Core\\Camera.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Camera.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Core\\Scene.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Core\\Scene.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Scene.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Core\\Ray.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Core\\Ray.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Ray.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Core\\Render.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Core\\Render.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Render.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Geometry\\Sphere.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Geometry\\Sphere.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Sphere.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Geometry\\Plane.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Geometry\\Plane.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Plane.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Geometry\\Mesh.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Geometry\\Mesh.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Mesh.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Math\\Point3d.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Math\\Point3d.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Point3d.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\Proc_graf\\Math\\Vector3d.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\Proc_graf\\Math\\Vector3d.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Vector3d.cpp",
+  "output": "CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\utils\\Scene\\sceneParser.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\utils\\Scene\\sceneParser.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/utils/Scene/sceneParser.cpp",
+  "output": "CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj"
+},
+{
+  "directory": "C:/Users/pedro/Documents/Ray-Tracing-main/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/RayTracer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\RayTracer.dir\\utils\\MeshReader\\ObjReader.cpp.obj -c C:\\Users\\pedro\\Documents\\Ray-Tracing-main\\utils\\MeshReader\\ObjReader.cpp",
+  "file": "C:/Users/pedro/Documents/Ray-Tracing-main/utils/MeshReader/ObjReader.cpp",
+  "output": "CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj"
+}
+]

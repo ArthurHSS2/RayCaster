@@ -1,0 +1,3 @@
+C:/Users/pedro/Documents/Ray-Tracing-main/build/CMakeFiles/RayTracer.dir
+C:/Users/pedro/Documents/Ray-Tracing-main/build/CMakeFiles/edit_cache.dir
+C:/Users/pedro/Documents/Ray-Tracing-main/build/CMakeFiles/rebuild_cache.dir
