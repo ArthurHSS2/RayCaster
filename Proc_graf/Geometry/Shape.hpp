@@ -4,6 +4,7 @@
 #include "../Core/Ray.hpp"
 #include <map>
 #include <string>
+#include "../Math/Matrix4x4.hpp"
 
 struct Material {
     float R, G, B;

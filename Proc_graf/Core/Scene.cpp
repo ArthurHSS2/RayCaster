@@ -30,10 +30,16 @@ std::unique_ptr<Shape> Scene::create_plane(const ObjectData& obj, const ColorDat
 }
 
 std::unique_ptr<Shape> Scene::create_mesh(const ObjectData& obj, const ColorData& color) {
+    Point3d min_pt(9999999, 9999999, 9999999);
+    Point3d max_pt(-9999999, -9999999, -9999999);
+
     auto pathIt = obj.otherProperties.find("path");
     if (pathIt == obj.otherProperties.end()) {
         return nullptr;
     }
+
+    std::vector<TransformData> transforms = obj.transforms;
+
     std::string objPath = pathIt->second;
     objReader reader(objPath);
 
@@ -43,19 +49,70 @@ std::unique_ptr<Shape> Scene::create_mesh(const ObjectData& obj, const ColorData
     std::vector<Vector3d> normais_faces;
     std::vector<Point3d> vertices;
 
+    // vendo tranformações
+    Matrix4x4 matrizAcumulada;
+
+    for(const auto& trans : transforms) {
+        Matrix4x4 transformacaoAtual;
+
+        if (trans.tType == "translation"){
+            Vector3d t = Vector3d(trans.data.getX(), trans.data.getY(), trans.data.getZ());
+            // Chama a função estática diretamente da Classe
+            transformacaoAtual = Matrix4x4::translation(t.x, t.y, t.z);
+        }
+        else if (trans.tType == "scaling"){
+            Vector3d s = Vector3d(trans.data.getX(), trans.data.getY(), trans.data.getZ());
+            transformacaoAtual = Matrix4x4::scaling(s.x, s.y, s.z);
+        }
+        else if (trans.tType == "rotation"){
+            Vector3d r = Vector3d(trans.data.getX(), trans.data.getY(), trans.data.getZ());
+            // Combina as rotações e guarda em transformacaoAtual
+            transformacaoAtual = Matrix4x4::rotationZ(r.z) * Matrix4x4::rotationY(r.y) * Matrix4x4::rotationX(r.x);
+        }
+        matrizAcumulada = transformacaoAtual * matrizAcumulada;
+    }
+
     for (const auto& triangle : facePoints) {
         if (triangle.size() == 3) {
             std::array<Point3d, 3> tri;
             for (int i = 0; i < 3; i++) {
                 // Convert Ponto to point3d
+                if (triangle[i].getX() < min_pt.x) min_pt.x = triangle[i].getX();
+                if (triangle[i].getY() < min_pt.y) min_pt.y = triangle[i].getY();
+                if (triangle[i].getZ() < min_pt.z) min_pt.z = triangle[i].getZ();
+                
+                if (triangle[i].getX() > max_pt.x) max_pt.x = triangle[i].getX();
+                if (triangle[i].getY() > max_pt.y) max_pt.y = triangle[i].getY();
+                if (triangle[i].getZ() > max_pt.z) max_pt.z = triangle[i].getZ();
+
                 tri[i] = Point3d(triangle[i].getX(), 
-                                triangle[i].getY(), 
-                                triangle[i].getZ());
+                                 triangle[i].getY(), 
+                                 triangle[i].getZ());
             }
             lista.push_back(tri);
         }
     }
-    
+
+    Point3d centro(
+        (min_pt.x + max_pt.x) / 2.0,
+        (min_pt.y + max_pt.y) / 2.0,
+        (min_pt.z + max_pt.z) / 2.0
+    );
+
+    Matrix4x4 T_ida = Matrix4x4::translation(-centro.x, -centro.y, -centro.z);
+
+    Matrix4x4 T_volta = Matrix4x4::translation(centro.x, centro.y, centro.z);
+
+    matrizAcumulada = T_volta*matrizAcumulada*T_ida;
+
+    for (auto& triangle : lista) {
+        if (triangle.size() == 3) {
+            for (int i = 0; i < 3; i++) {
+                triangle[i] = matrizAcumulada*triangle[i];
+            }
+        }
+    }
+
     return std::make_unique<Mesh>(
         vertices, lista, normais_faces, color.r * 255, color.g * 255, color.b * 255
     );

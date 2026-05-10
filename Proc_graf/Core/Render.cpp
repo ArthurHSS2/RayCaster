@@ -30,8 +30,9 @@ void Render::renderize(const Camera& cam, const Scene& cena) {
             } else {
                 file << "0 0 0 ";
             }
+            file << "\n";
         }
-        file << "\n";
+        
     }
     file.close();
 }

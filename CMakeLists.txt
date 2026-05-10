@@ -15,6 +15,7 @@ add_executable(${PROJECT_NAME}
     Proc_graf/Geometry/Sphere.cpp
     Proc_graf/Geometry/Plane.cpp
     Proc_graf/Geometry/Mesh.cpp
+    Proc_graf/Math/Matrix4x4.cpp
     Proc_graf/Math/Point3d.cpp
     Proc_graf/Math/Vector3d.cpp
     ../utils/Scene/sceneParser.cpp
