@@ -107,9 +107,9 @@
         "material": "esfera_espelho",
         "path": "utils/input/cubo1.obj",
         "transform": [
-                { "type": "scaling", "factors": [1, 1, 1] },
+                { "type": "scaling", "factors": [2, 2, 1] },
                 { "type": "rotation", "angle": [0, 0, 0] },
-                { "type": "translation", "vector": [0, 0, 0] }
+                { "type": "translation", "vector": [0, 0, 100] }
             ]
       },
     {

@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pedro\Documents\Ray-Tracing-main
+CMAKE_SOURCE_DIR = "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pedro\Documents\Ray-Tracing-main\build
+CMAKE_BINARY_DIR = "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RayTracer.dir/depend.make
@@ -73,183 +73,198 @@ CMakeFiles/RayTracer.dir/codegen:
 
 CMakeFiles/RayTracer.dir/main.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/main.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/main.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/main.cpp
+CMakeFiles/RayTracer.dir/main.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/main.cpp
 CMakeFiles/RayTracer.dir/main.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayTracer.dir/main.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/main.cpp.obj -MF CMakeFiles\RayTracer.dir\main.cpp.obj.d -o CMakeFiles\RayTracer.dir\main.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayTracer.dir/main.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/main.cpp.obj -MF CMakeFiles\RayTracer.dir\main.cpp.obj.d -o CMakeFiles\RayTracer.dir\main.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\main.cpp"
 
 CMakeFiles/RayTracer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/main.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\main.cpp > CMakeFiles\RayTracer.dir\main.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\main.cpp" > CMakeFiles\RayTracer.dir\main.cpp.i
 
 CMakeFiles/RayTracer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/main.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\main.cpp -o CMakeFiles\RayTracer.dir\main.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\main.cpp" -o CMakeFiles\RayTracer.dir\main.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Camera.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Core/Camera.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Camera.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Camera.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Camera.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Core/Camera.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Camera.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Camera.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Camera.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Scene.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Core/Scene.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Scene.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Scene.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Scene.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Core/Scene.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Scene.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Scene.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Scene.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Ray.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Core/Ray.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Ray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Ray.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Ray.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Ray.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Core/Ray.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Ray.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Ray.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Ray.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Render.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Core/Render.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Render.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Render.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Render.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Render.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Core\Render.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Core\Render.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Core\Render.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Sphere.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Sphere.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Sphere.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Sphere.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Sphere.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Sphere.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Sphere.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Sphere.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Plane.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Plane.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Plane.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Plane.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Plane.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Plane.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Plane.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Plane.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Mesh.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Mesh.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Mesh.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Mesh.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Mesh.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Geometry\Mesh.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Geometry\Mesh.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Geometry\Mesh.cpp.s
+
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Matrix4x4.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Math\Matrix4x4.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Matrix4x4.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Matrix4x4.cpp"
+
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Matrix4x4.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Math\Matrix4x4.cpp.i
+
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Matrix4x4.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Matrix4x4.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Point3d.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Point3d.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Point3d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Point3d.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Point3d.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Point3d.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Point3d.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Point3d.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Point3d.cpp.s
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Vector3d.cpp
+CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Vector3d.cpp
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Vector3d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj -MF CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.obj.d -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Vector3d.cpp"
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Vector3d.cpp > CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Vector3d.cpp" > CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.i
 
 CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf\Math\Vector3d.cpp -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf\Math\Vector3d.cpp" -o CMakeFiles\RayTracer.dir\Proc_graf\Math\Vector3d.cpp.s
 
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/utils/Scene/sceneParser.cpp
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj -MF CMakeFiles\RayTracer.dir\utils\Scene\sceneParser.cpp.obj.d -o CMakeFiles\RayTracer.dir\utils\Scene\sceneParser.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\utils\Scene\sceneParser.cpp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/Nova\ pasta/utils/Scene/sceneParser.cpp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj -MF CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\Scene\sceneParser.cpp.obj.d -o CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\Scene\sceneParser.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\Scene\sceneParser.cpp"
 
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\utils\Scene\sceneParser.cpp > CMakeFiles\RayTracer.dir\utils\Scene\sceneParser.cpp.i
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\Scene\sceneParser.cpp" > CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\Scene\sceneParser.cpp.i
 
-CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\utils\Scene\sceneParser.cpp -o CMakeFiles\RayTracer.dir\utils\Scene\sceneParser.cpp.s
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\Scene\sceneParser.cpp" -o CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\Scene\sceneParser.cpp.s
 
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: C:/Users/pedro/Documents/Ray-Tracing-main/utils/MeshReader/ObjReader.cpp
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj -MF CMakeFiles\RayTracer.dir\utils\MeshReader\ObjReader.cpp.obj.d -o CMakeFiles\RayTracer.dir\utils\MeshReader\ObjReader.cpp.obj -c C:\Users\pedro\Documents\Ray-Tracing-main\utils\MeshReader\ObjReader.cpp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/flags.make
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/includes_CXX.rsp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj: C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/Nova\ pasta/utils/MeshReader/ObjReader.cpp
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj: CMakeFiles/RayTracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj -MF CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\MeshReader\ObjReader.cpp.obj.d -o CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\MeshReader\ObjReader.cpp.obj -c "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\MeshReader\ObjReader.cpp"
 
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pedro\Documents\Ray-Tracing-main\utils\MeshReader\ObjReader.cpp > CMakeFiles\RayTracer.dir\utils\MeshReader\ObjReader.cpp.i
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\MeshReader\ObjReader.cpp" > CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\MeshReader\ObjReader.cpp.i
 
-CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pedro\Documents\Ray-Tracing-main\utils\MeshReader\ObjReader.cpp -o CMakeFiles\RayTracer.dir\utils\MeshReader\ObjReader.cpp.s
+CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\utils\MeshReader\ObjReader.cpp" -o CMakeFiles\RayTracer.dir\C_\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH_(1)\Nova_pasta\utils\MeshReader\ObjReader.cpp.s
 
 # Object files for target RayTracer
 RayTracer_OBJECTS = \
@@ -261,10 +276,11 @@ RayTracer_OBJECTS = \
 "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj" \
 "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj" \
 "CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj" \
+"CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj" \
 "CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj" \
 "CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj" \
-"CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj" \
-"CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj"
+"CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj" \
+"CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj"
 
 # External object files for target RayTracer
 RayTracer_EXTERNAL_OBJECTS =
@@ -277,15 +293,16 @@ RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Core/Render.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Plane.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Mesh.cpp.obj
+RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Math/Point3d.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/Proc_graf/Math/Vector3d.cpp.obj
-RayTracer.exe: CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj
-RayTracer.exe: CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj
+RayTracer.exe: CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj
+RayTracer.exe: CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj
 RayTracer.exe: CMakeFiles/RayTracer.dir/build.make
 RayTracer.exe: CMakeFiles/RayTracer.dir/linkLibs.rsp
 RayTracer.exe: CMakeFiles/RayTracer.dir/objects1.rsp
 RayTracer.exe: CMakeFiles/RayTracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable RayTracer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable RayTracer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\RayTracer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -297,6 +314,6 @@ CMakeFiles/RayTracer.dir/clean:
 .PHONY : CMakeFiles/RayTracer.dir/clean
 
 CMakeFiles/RayTracer.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pedro\Documents\Ray-Tracing-main C:\Users\pedro\Documents\Ray-Tracing-main C:\Users\pedro\Documents\Ray-Tracing-main\build C:\Users\pedro\Documents\Ray-Tracing-main\build C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles\RayTracer.dir\DependInfo.cmake "--color=$(COLOR)" RayTracer
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles\RayTracer.dir\DependInfo.cmake" "--color=$(COLOR)" RayTracer
 .PHONY : CMakeFiles/RayTracer.dir/depend
 

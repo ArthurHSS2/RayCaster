@@ -1,5 +1,5 @@
 CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: \
- C:\Users\pedro\Documents\Ray-Tracing-main\utils\MeshReader\ObjReader.cpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\utils\MeshReader\ObjReader.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/iostream \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -151,10 +151,10 @@ CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/15.2.0/sstream \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/sstream.tcc \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Vetor.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Ponto.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Vetor.h \
- C:\Users\pedro\Documents\Ray-Tracing-main\utils\MeshReader\Colormap.cpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Vetor.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Ponto.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Vetor.h \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\utils\MeshReader\Colormap.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/map \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
  C:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \

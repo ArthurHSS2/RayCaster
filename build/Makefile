@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pedro\Documents\Ray-Tracing-main
+CMAKE_SOURCE_DIR = "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\RayCaster-FUNCTIONAL_BRANCH"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pedro\Documents\Ray-Tracing-main\build
+CMAKE_BINARY_DIR = "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles C:\Users\pedro\Documents\Ray-Tracing-main\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pedro\Documents\Ray-Tracing-main\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH (1)\Nova pasta\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -127,6 +127,54 @@ RayTracer: cmake_check_build_system
 RayTracer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/build
 .PHONY : RayTracer/fast
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.obj: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.obj
+
+# target to build an object file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.obj
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.i: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.i
+
+# target to preprocess a source file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.i
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.s: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.s
+
+# target to generate assembly for a file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.cpp.s
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.obj: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.obj
+
+# target to build an object file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.obj
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.i: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.i
+
+# target to preprocess a source file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.i
+
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.s: C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.s
+
+# target to generate assembly for a file
+C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s
+.PHONY : C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.cpp.s
 
 Proc_graf/Core/Camera.obj: Proc_graf/Core/Camera.cpp.obj
 .PHONY : Proc_graf/Core/Camera.obj
@@ -296,6 +344,30 @@ Proc_graf/Geometry/Sphere.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/Proc_graf/Geometry/Sphere.cpp.s
 .PHONY : Proc_graf/Geometry/Sphere.cpp.s
 
+Proc_graf/Math/Matrix4x4.obj: Proc_graf/Math/Matrix4x4.cpp.obj
+.PHONY : Proc_graf/Math/Matrix4x4.obj
+
+# target to build an object file
+Proc_graf/Math/Matrix4x4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.obj
+.PHONY : Proc_graf/Math/Matrix4x4.cpp.obj
+
+Proc_graf/Math/Matrix4x4.i: Proc_graf/Math/Matrix4x4.cpp.i
+.PHONY : Proc_graf/Math/Matrix4x4.i
+
+# target to preprocess a source file
+Proc_graf/Math/Matrix4x4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.i
+.PHONY : Proc_graf/Math/Matrix4x4.cpp.i
+
+Proc_graf/Math/Matrix4x4.s: Proc_graf/Math/Matrix4x4.cpp.s
+.PHONY : Proc_graf/Math/Matrix4x4.s
+
+# target to generate assembly for a file
+Proc_graf/Math/Matrix4x4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/Proc_graf/Math/Matrix4x4.cpp.s
+.PHONY : Proc_graf/Math/Matrix4x4.cpp.s
+
 Proc_graf/Math/Point3d.obj: Proc_graf/Math/Point3d.cpp.obj
 .PHONY : Proc_graf/Math/Point3d.obj
 
@@ -368,54 +440,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-utils/MeshReader/ObjReader.obj: utils/MeshReader/ObjReader.cpp.obj
-.PHONY : utils/MeshReader/ObjReader.obj
-
-# target to build an object file
-utils/MeshReader/ObjReader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.obj
-.PHONY : utils/MeshReader/ObjReader.cpp.obj
-
-utils/MeshReader/ObjReader.i: utils/MeshReader/ObjReader.cpp.i
-.PHONY : utils/MeshReader/ObjReader.i
-
-# target to preprocess a source file
-utils/MeshReader/ObjReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.i
-.PHONY : utils/MeshReader/ObjReader.cpp.i
-
-utils/MeshReader/ObjReader.s: utils/MeshReader/ObjReader.cpp.s
-.PHONY : utils/MeshReader/ObjReader.s
-
-# target to generate assembly for a file
-utils/MeshReader/ObjReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/MeshReader/ObjReader.cpp.s
-.PHONY : utils/MeshReader/ObjReader.cpp.s
-
-utils/Scene/sceneParser.obj: utils/Scene/sceneParser.cpp.obj
-.PHONY : utils/Scene/sceneParser.obj
-
-# target to build an object file
-utils/Scene/sceneParser.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.obj
-.PHONY : utils/Scene/sceneParser.cpp.obj
-
-utils/Scene/sceneParser.i: utils/Scene/sceneParser.cpp.i
-.PHONY : utils/Scene/sceneParser.i
-
-# target to preprocess a source file
-utils/Scene/sceneParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.i
-.PHONY : utils/Scene/sceneParser.cpp.i
-
-utils/Scene/sceneParser.s: utils/Scene/sceneParser.cpp.s
-.PHONY : utils/Scene/sceneParser.s
-
-# target to generate assembly for a file
-utils/Scene/sceneParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracer.dir\build.make CMakeFiles/RayTracer.dir/utils/Scene/sceneParser.cpp.s
-.PHONY : utils/Scene/sceneParser.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -425,6 +449,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RayTracer
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.obj
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.i
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/MeshReader/ObjReader.s
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.obj
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.i
+	@echo ... C_/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH_(1)/Nova_pasta/utils/Scene/sceneParser.s
 	@echo ... Proc_graf/Core/Camera.obj
 	@echo ... Proc_graf/Core/Camera.i
 	@echo ... Proc_graf/Core/Camera.s
@@ -446,6 +476,9 @@ help:
 	@echo ... Proc_graf/Geometry/Sphere.obj
 	@echo ... Proc_graf/Geometry/Sphere.i
 	@echo ... Proc_graf/Geometry/Sphere.s
+	@echo ... Proc_graf/Math/Matrix4x4.obj
+	@echo ... Proc_graf/Math/Matrix4x4.i
+	@echo ... Proc_graf/Math/Matrix4x4.s
 	@echo ... Proc_graf/Math/Point3d.obj
 	@echo ... Proc_graf/Math/Point3d.i
 	@echo ... Proc_graf/Math/Point3d.s
@@ -455,12 +488,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... utils/MeshReader/ObjReader.obj
-	@echo ... utils/MeshReader/ObjReader.i
-	@echo ... utils/MeshReader/ObjReader.s
-	@echo ... utils/Scene/sceneParser.obj
-	@echo ... utils/Scene/sceneParser.i
-	@echo ... utils/Scene/sceneParser.s
 .PHONY : help
 
 

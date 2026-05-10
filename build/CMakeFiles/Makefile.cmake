@@ -39,11 +39,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-windres.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake"
-  "C:/Users/pedro/Documents/Ray-Tracing-main/CMakeLists.txt"
   "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeSystem.cmake"
+  "C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH (1)/RayCaster-FUNCTIONAL_BRANCH/CMakeLists.txt"
   )
 
 # The corresponding makefile is:

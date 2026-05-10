@@ -1,5 +1,5 @@
 CMakeFiles/RayTracer.dir/main.cpp.obj: \
- C:\Users\pedro\Documents\Ray-Tracing-main\main.cpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\main.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/iostream \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -139,14 +139,14 @@ CMakeFiles/RayTracer.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/15.2.0/istream \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc \
- C:\Users\pedro\Documents\Ray-Tracing-main\src/Ponto.h \
- C:\Users\pedro\Documents\Ray-Tracing-main\src/Vetor.h \
- C:\Users\pedro\Documents\Ray-Tracing-main\src/Vetor.h \
- C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf/Core/Render.hpp \
- C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf/Core/Camera.hpp \
- C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf/Core/Ray.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Point3d.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Math/Vector3d.hpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\src/Ponto.h \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\src/Vetor.h \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\src/Vetor.h \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf/Core/Render.hpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf/Core/Camera.hpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf/Core/Ray.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Point3d.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Vector3d.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \
@@ -163,9 +163,9 @@ CMakeFiles/RayTracer.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc \
  C:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/15.2.0/tr1/riemann_zeta.tcc \
- C:\Users\pedro\Documents\Ray-Tracing-main\Proc_graf/Core/Scene.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Shape.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Core/Ray.hpp \
+ C:\Users\pedro\Documents\RayCaster-FUNCTIONAL_BRANCH\ (1)\RayCaster-FUNCTIONAL_BRANCH\Proc_graf/Core/Scene.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Shape.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Core/Ray.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/map \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
  C:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \
@@ -173,18 +173,20 @@ CMakeFiles/RayTracer.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Sphere.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Shape.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Plane.hpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/Proc_graf/Geometry/Mesh.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Matrix4x4.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Math/Point3d.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/array \
  C:/msys64/ucrt64/include/c++/15.2.0/compare \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Sphere.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Shape.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Plane.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/Proc_graf/Geometry/Mesh.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/vector \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/vector.tcc \
- C:/Users/pedro/Documents/Ray-Tracing-main/utils/Scene/sceneParser.cpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/utils/Scene/sceneParser.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/cstdint \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  C:/msys64/ucrt64/include/stdint.h \
@@ -195,9 +197,9 @@ CMakeFiles/RayTracer.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/15.2.0/sstream \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/sstream.tcc \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Vetor.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Ponto.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/utils/Scene/sceneSchema.hpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Vetor.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Ponto.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/utils/Scene/sceneSchema.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \
@@ -206,15 +208,15 @@ CMakeFiles/RayTracer.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/utils/Scene/jsonParser.cpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/utils/Scene/jsonParser.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/variant \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/monostate.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/parse_numbers.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/utils/MeshReader/ObjReader.cpp \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Vetor.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/src/Ponto.h \
- C:/Users/pedro/Documents/Ray-Tracing-main/utils/MeshReader/Colormap.cpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/utils/MeshReader/ObjReader.cpp \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Vetor.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/src/Ponto.h \
+ C:/Users/pedro/Documents/RayCaster-FUNCTIONAL_BRANCH\ (1)/RayCaster-FUNCTIONAL_BRANCH/utils/MeshReader/Colormap.cpp \
  C:/msys64/ucrt64/include/c++/15.2.0/memory \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/align.h \
