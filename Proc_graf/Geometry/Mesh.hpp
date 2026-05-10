@@ -6,11 +6,8 @@
 #include <vector>
 
 class Mesh : public Shape {
-    //int num_triangulos, num_vertices;
     std::vector<Point3d> vertices;
     std::vector<std::array<Point3d, 3>> lista;
-    //std::vector<double> normais_triangulos;
-    //std::vector<double> normais_vertices;
     std::vector<Vector3d> normais_faces;
 
 
@@ -19,7 +16,9 @@ public:
 
     Mesh(std::vector<Point3d>& vertices, std::vector<std::array<Point3d, 3>>& lista, std::vector<Vector3d> normais_faces, 
         float R, float G, float B) 
-    : vertices(vertices), lista(lista), normais_faces(normais_faces), R(R), G(G), B(B) {}
+    : vertices(vertices), lista(lista), normais_faces(normais_faces), R(R), G(G), B(B) {
+        material.R = R; material.G = G; material.B = B;
+    }
 
     double intersect(const Ray& ray) const override;
 
