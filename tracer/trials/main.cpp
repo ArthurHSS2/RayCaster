@@ -10,8 +10,8 @@
 int main() {
 	hittable_list world;
 	
-	    world.add(make_shared<sphere>(Point3d(0,0,-1), 0.5));
-	    world.add(make_shared<sphere>(Point3d(0,-100.5,-1), 100));
+	    world.add(make_shared<sphere>(Point3d(0,0,-1), 0.5, color(1,0,0)));
+	    world.add(make_shared<sphere>(Point3d(0,-100.5,-1), 100, color(0.5,0.5,0.5)));
 	
 	    camera cam;
 	

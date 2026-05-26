@@ -6,7 +6,7 @@
 
 class sphere : public hittable {
   public:
-    sphere(const Point3d& center, double radius) : center(center), radius(std::fmax(0,radius)) {}
+    sphere(const Point3d& center, double radius, const color& col) : center(center), radius(std::fmax(0,radius)), col(col) {}
 
     bool hit(const Ray& r, interval ray_t, hit_record& rec) const override {
         Vector3d oc = center - r.get_origin();
@@ -31,6 +31,7 @@ class sphere : public hittable {
         rec.t = root;
         rec.p = r.at(rec.t);
         rec.normal = (rec.p - center) / radius;
+	rec.col = col;
 
         return true;
     }
@@ -38,6 +39,7 @@ class sphere : public hittable {
   private:
     Point3d center;
     double radius;
+    color col;
 };
 
 #endif

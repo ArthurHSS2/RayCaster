@@ -25,8 +25,7 @@ class camera {
                     color pixel_color = ray_color(r, world);
                     write_color(std::cout, pixel_color);
                 }
-            }
-    
+            }    
             std::clog << "\rDone.                 \n";
         }
 
@@ -66,13 +65,10 @@ class camera {
         hit_record rec;
 
         if (world.hit(r, interval(0, infinity), rec)) {
-            return (rec.normal + color(1,1,1)) * 0.5 ;
+            return rec.col;
         }
-
-        Vector3d unit_direction = r.get_dir().normalizacao();
-        auto a = 0.5*(unit_direction.y + 1.0);
-        return color(1.0, 1.0, 1.0)* (1.0-a) + color(0.5, 0.7, 1.0)*a;
-    }
+	else {return color(0,0,0);}
+};
 };
 
 

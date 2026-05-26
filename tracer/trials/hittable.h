@@ -9,6 +9,7 @@ class hit_record {
     Vector3d normal;
     double t;
     bool front_face;
+    color col;
     
         void set_face_normal(const Ray& r, const Vector3d& outward_normal) {
             // Sets the hit record normal vector.
