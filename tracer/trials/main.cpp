@@ -1,0 +1,26 @@
+#include "color.hpp"
+#include "commom.hpp"
+#include "hittable.h"
+#include "hittable_list.hpp"
+#include "sphere.hpp"
+#include "plane.hpp"
+#include "camera.hpp"
+
+
+
+int main() {
+	hittable_list world;
+
+	    world.add(make_shared<sphere>(Point3d(0,0,-1), 0.5, color(1,0,0)));
+	    world.add(make_shared<sphere>(Point3d(0,-100.5,-1), 100, color(0.5,0.5,0.5)));
+
+		//plano verde
+    	world.add(std::make_shared<plane>(Point3d(0, -0.5, 0), Vector3d(0, 1, 0), color(0, 0.8, 0)));
+
+	    camera cam;
+	
+	    cam.aspect_ratio = 16.0 / 9.0;
+	    cam.image_width  = 400;
+	
+	    cam.render(world);
+}
