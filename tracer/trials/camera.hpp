@@ -1,8 +1,10 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
+
 #include "color.hpp"
 #include "hittable.h"
+#include <vector>
 #include "light.hpp"
 
 class camera {
@@ -11,7 +13,7 @@ class camera {
     int    image_width  = 100;  // Rendered image width in pixel count
 
     // O render recebe a luz da cena e a luz ambiente global
-    void render(const hittable& world, const PointLight& light, const color& global_ambient) {
+    void render(const hittable& world, const std::vector<PointLight>& lights, const color& global_ambient) {
         initialize();
 
         std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
@@ -24,7 +26,7 @@ class camera {
                 Ray r(center, ray_direction);
 
                 // o raio, o mundo, a lâmpada e a cor ambiente são passados para o cálculo do pixel
-                color pixel_color = ray_color(r, world, light, global_ambient);
+                color pixel_color = ray_color(r, world, lights, global_ambient);
                 write_color(std::cout, pixel_color);
             }
         }    
@@ -63,48 +65,55 @@ class camera {
         pixel00_loc = Point3d(0,0,0) + (viewport_upper_left + (pixel_delta_u + pixel_delta_v) * 0.5);
     }
 
-    color ray_color(const Ray& r, const hittable& world, const PointLight& light, const color& global_ambient) const {
+    color ray_color(const Ray& r, const hittable& world, const std::vector<PointLight>& lights, const color& global_ambient) const {
         hit_record rec;
 
         // Se o raio bateu em algo (intervalo modificado de 0 para 0.001)
         if (world.hit(r, interval(0.001, infinity), rec)) {
             
             // AMBIENTE (Multiplicação componente a componente x, y, z)
-            color ambiente = color(rec.ka.x * global_ambient.x, 
-                                   rec.ka.y * global_ambient.y, 
-                                   rec.ka.z * global_ambient.z);
+            // Calculado apenas uma vez, independentemente de quantas luzes existem
+            color cor_final = color(rec.ka.x * global_ambient.x, 
+                                    rec.ka.y * global_ambient.y, 
+                                    rec.ka.z * global_ambient.z);
 
             Vector3d N = rec.normal.normalizacao();
-            Vector3d dir_luz = light.pos - rec.p;
-            double dist_luz = dir_luz.modulo();
-            Vector3d L = dir_luz.normalizacao();
             Vector3d V = (-r.get_dir()).normalizacao();
 
-            // DIFUSA
-            double fator_difuso = std::max(0.0, L.produto_escalar(N));
-            color difusa = color(rec.kd.x * light.intensity.x, 
-                                 rec.kd.y * light.intensity.y, 
-                                 rec.kd.z * light.intensity.z) * fator_difuso;
+            // Loop por todas as luzes da cena
+            for (const auto& light : lights) {
+                Vector3d dir_luz = light.pos - rec.p;
+                double dist_luz = dir_luz.modulo();
+                Vector3d L = dir_luz.normalizacao();
 
-            // ESPECULAR
-            Vector3d R = (N * 2.0 * L.produto_escalar(N)) - L;
-            double fator_especular = std::pow(std::max(0.0, R.produto_escalar(V)), rec.ns);
-            color especular = color(rec.ks.x * light.intensity.x, 
-                                    rec.ks.y * light.intensity.y, 
-                                    rec.ks.z * light.intensity.z) * fator_especular;
+                // --- SOMBRAS ---
+                // Dispara o raio de sombra a partir do ponto de impacto
+                Ray shadow_ray(rec.p + (N * 0.001), L);
+                hit_record shadow_rec;
+                
+                // Se o raio de sombra bater em qualquer coisa antes de chegar na luz, está na sombra
+                // (Invertemos a lógica: se NÃO bater, adicionamos difusa e especular desta luz)
+                if (!world.hit(shadow_ray, interval(0.001, dist_luz), shadow_rec)) {
+                    
+                    // DIFUSA
+                    double fator_difuso = std::max(0.0, L.produto_escalar(N));
+                    color difusa = color(rec.kd.x * light.intensity.x, 
+                                         rec.kd.y * light.intensity.y, 
+                                         rec.kd.z * light.intensity.z) * fator_difuso;
 
-            // --- SOMBRAS ---
-            // Dispara o raio de sombra a partir do ponto de impacto
-            Ray shadow_ray(rec.p + (N * 0.001), L);
-            hit_record shadow_rec;
-            
-            // Se o raio de sombra bater em qualquer coisa antes de chegar na luz, está na sombra
-            if (world.hit(shadow_ray, interval(0.001, dist_luz), shadow_rec)) {
-                return ambiente; // Retorna SÓ o ambiente, bloqueia difusa e especular
+                    // ESPECULAR
+                    Vector3d R = (N * 2.0 * L.produto_escalar(N)) - L;
+                    double fator_especular = std::pow(std::max(0.0, R.produto_escalar(V)), rec.ns);
+                    color especular = color(rec.ks.x * light.intensity.x, 
+                                            rec.ks.y * light.intensity.y, 
+                                            rec.ks.z * light.intensity.z) * fator_especular;
+
+                    // Se chegou até aqui, não tem sombra bloqueando a luz, soma na cor final
+                    cor_final = cor_final + difusa + especular;
+                }
             }
 
-            // Se chegou até aqui, não tem sombra bloqueando a luz
-            return ambiente + difusa + especular;
+            return cor_final;
         }
 
         // Se não bateu em nada, retorna a cor do fundo (preto)
