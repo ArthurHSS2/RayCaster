@@ -11,7 +11,8 @@ class camera {
   public:
     double aspect_ratio = 1.0;  // Ratio of image width over height
     int    image_width  = 100;  // Rendered image width in pixel count
-
+    int    image_height;   // Rendered image height
+    
     double vfov = 90.0;  // Ângulo de visão vertical (Zoom)
     Point3d lookfrom = Point3d(0, 0, 0);   // Posição da câmara
     Point3d lookat   = Point3d(0, 0, -1);  // Para onde ela aponta
@@ -39,7 +40,7 @@ class camera {
     }
 
   private:
-    int    image_height;   // Rendered image height
+    
     Point3d center;         // Camera center
     Point3d pixel00_loc;    // Location of pixel 0, 0
     Vector3d   pixel_delta_u;  // Offset to pixel to the right

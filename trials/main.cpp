@@ -22,8 +22,7 @@
 int main() {
     try {
         // CARREGAR A CENA
-        // Pode trocar por "trials/utils/input/monkeyScene.json" ou outro depois
-        std::string arquivo_cena = "trials/utils/input/sampleScene.json";
+        std::string arquivo_cena = "trials/utils/input/caso3.json";
         std::cerr << "A carregar a cena: " << arquivo_cena << "...\n";
         
         SceneData scene = SceneJsonLoader::loadFile(arquivo_cena);
@@ -37,6 +36,14 @@ int main() {
             color intensidade(light.color.r, light.color.g, light.color.b);
             luzes_da_cena.push_back(PointLight(pos, intensidade));
         }
+
+        // Garante luz se o JSON não tiver
+        if (luzes_da_cena.empty()) {
+            std::cerr << "Aviso: Nenhuma luz encontrada. Injetando Luz de Emergencia...\n";
+            Point3d posLuz(scene.camera.lookfrom.getX(), scene.camera.lookfrom.getY() + 10, scene.camera.lookfrom.getZ());
+            luzes_da_cena.push_back(PointLight(posLuz, color(1.0, 1.0, 1.0)));
+        }
+
         color luz_ambiente_global(scene.globalLight.color.r, scene.globalLight.color.g, scene.globalLight.color.b);
 
         // PROCESSAR OBJETOS E MALHAS
@@ -48,13 +55,17 @@ int main() {
             color ks(obj.material.ks.r, obj.material.ks.g, obj.material.ks.b);
             double ns = obj.material.ns;
 
-            // 1. PROCESSAR TRANSFORMAÇÕES COM SEGURANÇA
+            // PROCESSAR TRANSFORMAÇÕES COM SEGURANÇA
             Matrix4x4 matFinal; 
             double detEscala = 1.0; // Rastreia se o objeto foi virado do avesso
+            bool usou_translacao_no_transform = false; // 💡 Rastreador de Dupla Translação
 
             for (auto& t : obj.transforms) {
                 Matrix4x4 step;
-                if (t.tType == "translation") step = Matrix4x4::translation(t.data.getX(), t.data.getY(), t.data.getZ());
+                if (t.tType == "translation") {
+                    step = Matrix4x4::translation(t.data.getX(), t.data.getY(), t.data.getZ());
+                    usou_translacao_no_transform = true; // Avisa que já movemos o objeto!
+                }
                 else if (t.tType == "scaling") {
                     step = Matrix4x4::scaling(t.data.getX(), t.data.getY(), t.data.getZ());
                     detEscala *= (t.data.getX() * t.data.getY() * t.data.getZ());
@@ -69,8 +80,10 @@ int main() {
                 matFinal = step * matFinal;
             }
 
-            // Aplica a posição relativa final
-            matFinal = Matrix4x4::translation(obj.relativePos.getX(), obj.relativePos.getY(), obj.relativePos.getZ()) * matFinal;
+            // (Evita dupla translação)Aplica apenas se o JSON não tiver usado "transform" de translação
+            if (!usou_translacao_no_transform) {
+                matFinal = Matrix4x4::translation(obj.relativePos.getX(), obj.relativePos.getY(), obj.relativePos.getZ()) * matFinal;
+            }
 
             // Instanciar consoante o tipo geométrico
             if (obj.objType == "sphere") {
@@ -81,7 +94,11 @@ int main() {
             else if (obj.objType == "plane") {
                 Vetor normJSON = obj.vetorPointData["normal"];
                 Vector3d normal = matFinal.multiply_vector(Vector3d(normJSON.getX(), normJSON.getY(), normJSON.getZ())).normalizacao();
-                Point3d point = matFinal.multiply_point(Point3d(0, 0, 0));
+                
+                // Lendo o point_on_plane em vez de assumir (0,0,0)
+                Vetor ptJSON = obj.vetorPointData["point_on_plane"];
+                Point3d point = matFinal.multiply_point(Point3d(ptJSON.getX(), ptJSON.getY(), ptJSON.getZ()));
+                
                 world.add(std::make_shared<plane>(point, normal, ka, kd, ks, ns));
             }
             else if (obj.objType == "mesh") {
@@ -127,9 +144,21 @@ int main() {
 
         // CONFIGURAR A CÂMARA
         camera cam;
-        cam.image_width  = scene.camera.image_width;
-        cam.aspect_ratio = (double)scene.camera.image_width / (double)scene.camera.image_height;
-        cam.vfov = 90.0;
+        
+        // Reduz resoluções absurdas
+        double max_width = 600.0;
+        if (scene.camera.image_width > max_width) {
+            cam.image_width = max_width;
+            cam.image_height = max_width / ((double)scene.camera.image_width / (double)scene.camera.image_height);
+            std::cerr << "Resolucao otimizada para " << cam.image_width << "x" << cam.image_height << "!\n";
+        } else {
+            cam.image_width  = scene.camera.image_width;
+            cam.image_height = scene.camera.image_height;
+        }
+
+        cam.aspect_ratio = (double)cam.image_width / (double)cam.image_height;
+        cam.vfov = 90.0; // Mantemos o FOV fixo até haver um cálculo de FOV a partir do screen_distance
+        
         cam.lookfrom = Point3d(scene.camera.lookfrom.getX(), scene.camera.lookfrom.getY(), scene.camera.lookfrom.getZ());
         cam.lookat   = Point3d(scene.camera.lookat.getX(), scene.camera.lookat.getY(), scene.camera.lookat.getZ());
         cam.vup      = Vector3d(scene.camera.upVector.getX(), scene.camera.upVector.getY(), scene.camera.upVector.getZ());
