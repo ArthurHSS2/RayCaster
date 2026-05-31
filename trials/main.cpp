@@ -13,6 +13,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cmath> // Adicionado para reconhecer o M_PI
 
 // Incluindo o parser e o leitor de OBJ do repositório
 #include "utils/Scene/sceneParser.cpp"
@@ -21,8 +22,8 @@
 int main() {
     try {
         // CARREGAR A CENA
-        // trocar por "utils/input/monkeyScene.json" ou "mirrorScene.json" depois
-        std::string arquivo_cena = "trials/utils/input/monkeyScene.json";
+        // Pode trocar por "trials/utils/input/monkeyScene.json" ou outro depois
+        std::string arquivo_cena = "trials/utils/input/sampleScene.json";
         std::cerr << "A carregar a cena: " << arquivo_cena << "...\n";
         
         SceneData scene = SceneJsonLoader::loadFile(arquivo_cena);
@@ -47,15 +48,27 @@ int main() {
             color ks(obj.material.ks.r, obj.material.ks.g, obj.material.ks.b);
             double ns = obj.material.ns;
 
-            // Criar a matriz de transformação do objeto lendo as instruções do JSON
+            // 1. PROCESSAR TRANSFORMAÇÕES COM SEGURANÇA
             Matrix4x4 matFinal; 
+            double detEscala = 1.0; // Rastreia se o objeto foi virado do avesso
+
             for (auto& t : obj.transforms) {
                 Matrix4x4 step;
                 if (t.tType == "translation") step = Matrix4x4::translation(t.data.getX(), t.data.getY(), t.data.getZ());
-                else if (t.tType == "scaling") step = Matrix4x4::scaling(t.data.getX(), t.data.getY(), t.data.getZ());
-                else if (t.tType == "rotation") step = Matrix4x4::rotationZ(t.data.getZ()) * Matrix4x4::rotationY(t.data.getY()) * Matrix4x4::rotationX(t.data.getX());
+                else if (t.tType == "scaling") {
+                    step = Matrix4x4::scaling(t.data.getX(), t.data.getY(), t.data.getZ());
+                    detEscala *= (t.data.getX() * t.data.getY() * t.data.getZ());
+                }
+                else if (t.tType == "rotation") {
+                    // Converter graus para radianos!
+                    double radX = t.data.getX() * M_PI / 180.0;
+                    double radY = t.data.getY() * M_PI / 180.0;
+                    double radZ = t.data.getZ() * M_PI / 180.0;
+                    step = Matrix4x4::rotationZ(radZ) * Matrix4x4::rotationY(radY) * Matrix4x4::rotationX(radX);
+                }
                 matFinal = step * matFinal;
             }
+
             // Aplica a posição relativa final
             matFinal = Matrix4x4::translation(obj.relativePos.getX(), obj.relativePos.getY(), obj.relativePos.getZ()) * matFinal;
 
@@ -75,29 +88,38 @@ int main() {
                 std::string path = obj.otherProperties["path"];
                 if (path.empty()) path = obj.otherProperties["file"];
                 
-                // Garantir que encontra o arquivo na pasta correta se o JSON só passar o nome
-                if (path.find("utils/") == 0) {
-                    path = "trials/" + path;
-                } else if (path.find("/") == std::string::npos) {
-                    path = "trials/utils/input/" + path;
-                }
+                // Força a encontrar o arquivo na pasta correta
+                std::string nome_arquivo = path.substr(path.find_last_of("/\\") + 1);
+                path = "trials/utils/input/" + nome_arquivo;
+
+                std::cerr << "Lendo malha: " << path << "\n";
 
                 objReader reader(path);
                 auto faces = reader.getFacePoints(); 
 
-                // Transforma e gera triângulos para cada face lida
+                // Se o determinante for negativo, a normal precisa ser espelhada
+                bool invertNormals = (detEscala < 0.0);
+
+                // 2. TRIANGULAÇÃO DE QUADS E N-GONS (Fan Triangulation)
                 for(auto& face : faces) {
                     if(face.size() >= 3) { 
-                        Point3d vA = matFinal.multiply_point(Point3d(face[0].getX(), face[0].getY(), face[0].getZ()));
-                        Point3d vB = matFinal.multiply_point(Point3d(face[1].getX(), face[1].getY(), face[1].getZ()));
-                        Point3d vC = matFinal.multiply_point(Point3d(face[2].getX(), face[2].getY(), face[2].getZ()));
+                        // Fatiar qualquer polígono em triângulos sequenciais
+                        for (size_t i = 1; i < face.size() - 1; ++i) {
+                            Point3d vA = matFinal.multiply_point(Point3d(face[0].getX(), face[0].getY(), face[0].getZ()));
+                            Point3d vB = matFinal.multiply_point(Point3d(face[i].getX(), face[i].getY(), face[i].getZ()));
+                            Point3d vC = matFinal.multiply_point(Point3d(face[i+1].getX(), face[i+1].getY(), face[i+1].getZ()));
 
-                        // Calcula a normal da face transformada
-                        Vector3d edge1 = vB - vA;
-                        Vector3d edge2 = vC - vA;
-                        Vector3d flat_normal = edge1.produto_vetorial(edge2).normalizacao();
+                            // Calcula a normal da face transformada
+                            Vector3d edge1 = vB - vA;
+                            Vector3d edge2 = vC - vA;
+                            Vector3d flat_normal = edge1.produto_vetorial(edge2).normalizacao();                            
+                            // Conserta a normal caso a malha esteja do avesso
+                            if (invertNormals) {
+                                flat_normal = flat_normal * -1.0;
+                            }
 
-                        world.add(std::make_shared<triangle>(vA, vB, vC, flat_normal, flat_normal, flat_normal, ka, kd, ks, ns));
+                            world.add(std::make_shared<triangle>(vA, vB, vC, flat_normal, flat_normal, flat_normal, ka, kd, ks, ns));
+                        }
                     }
                 }
             }
