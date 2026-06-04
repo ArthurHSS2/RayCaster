@@ -22,7 +22,7 @@
 int main() {
     try {
         // CARREGAR A CENA
-        std::string arquivo_cena = "trials/utils/input/caso3.json";
+        std::string arquivo_cena = "trials/utils/input/caso2.json";
         std::cerr << "A carregar a cena: " << arquivo_cena << "...\n";
         
         SceneData scene = SceneJsonLoader::loadFile(arquivo_cena);
@@ -49,29 +49,34 @@ int main() {
         // PROCESSAR OBJETOS E MALHAS
         for (auto& obj : scene.objects) {
             
-            // Extrair materiais comuns a todos os objetos
+            // Extrair materiais comuns (Entrega 3)
             color ka(obj.material.ka.r, obj.material.ka.g, obj.material.ka.b);
             color kd(obj.material.color.r, obj.material.color.g, obj.material.color.b);
             color ks(obj.material.ks.r, obj.material.ks.g, obj.material.ks.b);
             double ns = obj.material.ns;
 
+            // MATERIAIS RECURSIVOS
+            color kr(obj.material.kr.r, obj.material.kr.g, obj.material.kr.b); // Reflexão
+            color kt(obj.material.kt.r, obj.material.kt.g, obj.material.kt.b); // Transparência/Refração
+            double ni = obj.material.ni; // Índice de Refração (IOR)
+
             // PROCESSAR TRANSFORMAÇÕES COM SEGURANÇA
             Matrix4x4 matFinal; 
             double detEscala = 1.0; // Rastreia se o objeto foi virado do avesso
-            bool usou_translacao_no_transform = false; // 💡 Rastreador de Dupla Translação
+            bool usou_translacao_no_transform = false; // Rastreador de Dupla Translação
 
             for (auto& t : obj.transforms) {
                 Matrix4x4 step;
                 if (t.tType == "translation") {
                     step = Matrix4x4::translation(t.data.getX(), t.data.getY(), t.data.getZ());
-                    usou_translacao_no_transform = true; // Avisa que já movemos o objeto!
+                    usou_translacao_no_transform = true; // Avisa que já movemos o objeto
                 }
                 else if (t.tType == "scaling") {
                     step = Matrix4x4::scaling(t.data.getX(), t.data.getY(), t.data.getZ());
                     detEscala *= (t.data.getX() * t.data.getY() * t.data.getZ());
                 }
                 else if (t.tType == "rotation") {
-                    // Converter graus para radianos!
+                    // Converter graus para radianos
                     double radX = t.data.getX() * M_PI / 180.0;
                     double radY = t.data.getY() * M_PI / 180.0;
                     double radZ = t.data.getZ() * M_PI / 180.0;
@@ -80,16 +85,16 @@ int main() {
                 matFinal = step * matFinal;
             }
 
-            // (Evita dupla translação)Aplica apenas se o JSON não tiver usado "transform" de translação
+            // (Evita dupla translação) Aplica apenas se o JSON não tiver usado "transform" de translação
             if (!usou_translacao_no_transform) {
                 matFinal = Matrix4x4::translation(obj.relativePos.getX(), obj.relativePos.getY(), obj.relativePos.getZ()) * matFinal;
             }
 
-            // Instanciar consoante o tipo geométrico
+            // Instanciar consoante o tipo geométrico passando os novos parâmetros (kr, kt, ni)
             if (obj.objType == "sphere") {
                 double radius = obj.numericData["radius"];
                 Point3d center = matFinal.multiply_point(Point3d(0, 0, 0)); 
-                world.add(std::make_shared<sphere>(center, radius, ka, kd, ks, ns));
+                world.add(std::make_shared<sphere>(center, radius, ka, kd, ks, ns, kr, kt, ni));
             }
             else if (obj.objType == "plane") {
                 Vetor normJSON = obj.vetorPointData["normal"];
@@ -99,7 +104,7 @@ int main() {
                 Vetor ptJSON = obj.vetorPointData["point_on_plane"];
                 Point3d point = matFinal.multiply_point(Point3d(ptJSON.getX(), ptJSON.getY(), ptJSON.getZ()));
                 
-                world.add(std::make_shared<plane>(point, normal, ka, kd, ks, ns));
+                world.add(std::make_shared<plane>(point, normal, ka, kd, ks, ns, kr, kt, ni));
             }
             else if (obj.objType == "mesh") {
                 std::string path = obj.otherProperties["path"];
@@ -117,7 +122,7 @@ int main() {
                 // Se o determinante for negativo, a normal precisa ser espelhada
                 bool invertNormals = (detEscala < 0.0);
 
-                // 2. TRIANGULAÇÃO DE QUADS E N-GONS (Fan Triangulation)
+                // TRIANGULAÇÃO DE QUADS E N-GONS (Fan Triangulation)
                 for(auto& face : faces) {
                     if(face.size() >= 3) { 
                         // Fatiar qualquer polígono em triângulos sequenciais
@@ -130,12 +135,14 @@ int main() {
                             Vector3d edge1 = vB - vA;
                             Vector3d edge2 = vC - vA;
                             Vector3d flat_normal = edge1.produto_vetorial(edge2).normalizacao();                            
+                            
                             // Conserta a normal caso a malha esteja do avesso
                             if (invertNormals) {
                                 flat_normal = flat_normal * -1.0;
                             }
 
-                            world.add(std::make_shared<triangle>(vA, vB, vC, flat_normal, flat_normal, flat_normal, ka, kd, ks, ns));
+                            // Agora passamos kr, kt e ni para os triângulos
+                            world.add(std::make_shared<triangle>(vA, vB, vC, flat_normal, flat_normal, flat_normal, ka, kd, ks, ns, kr, kt, ni));
                         }
                     }
                 }

@@ -8,8 +8,8 @@ class plane : public hittable {
   public:
     // O construtor recebe um ponto pertencente ao plano, o vetor normal e a cor
     // Construtor atualizado com os materiais
-    plane(const Point3d& point, const Vector3d& normal, const color& ka, const color& kd, const color& ks, double ns) 
-        : point(point), normal(normal.normalizacao()), ka(ka), kd(kd), ks(ks), ns(ns) {}
+    plane(const Point3d& point, const Vector3d& normal, const color& ka, const color& kd, const color& ks, double ns, const color& kr, const color& kt, double ni) 
+        : point(point), normal(normal.normalizacao()), ka(ka), kd(kd), ks(ks), ns(ns), kr(kr), kt(kt), ni(ni) {}
 
     bool hit(const Ray& r, interval ray_t, hit_record& rec) const override {
         // Produto escalar entre a direção do raio e a normal do plano (o denominador)
@@ -36,7 +36,9 @@ class plane : public hittable {
         rec.kd = kd;
         rec.ks = ks;
         rec.ns = ns;
-        
+        rec.kr = kr;
+        rec.kt = kt;
+        rec.ni = ni;
         
         // Essa função da classe base decide se o raio bateu 
         // no plano pela frente ou por trás, e ajusta a normal adequadamente
@@ -50,7 +52,10 @@ class plane : public hittable {
     Vector3d normal;
     color ka; 
     color kd; 
-    color ks; 
+    color ks;
+    color kr;
+    color kt;
+    double ni; 
     double ns;
 };
 

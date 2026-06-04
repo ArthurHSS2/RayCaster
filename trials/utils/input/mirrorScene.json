@@ -5,7 +5,7 @@
         "upVector": [0.0797, 0.9958, 0.0450],
         "image_width": 800,
         "image_height": 600,
-        "screen_distance": 0.7500
+        "vfov": 0.7500
     },
     "globalLight": [0.1000, 0.1000, 0.1000],
     "lights": [
@@ -260,9 +260,9 @@
             "material": "material11",
             "path": "../input/cubo2.obj",
             "transform": [
-                { "type": "scaling", "factors": [20, 20, 20] },
-                { "type": "rotation", "angle": [0.785398163, 0, 0.785398163] },
-                { "type": "translation", "vector": [0, 28, 0] }
+                { "type": "scaling", "data": [20, 20, 20] },
+                { "type": "rotation", "data": [0.785398163, 0, 0.785398163] },
+                { "type": "translation", "data": [0, 28, 0] }
             ]
         },
         {

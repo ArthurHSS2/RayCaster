@@ -11,11 +11,12 @@ private:
     Point3d a, b, c;
     Vector3d na, nb, nc;
     color ka; color kd; color ks; double ns;
+    color kr; color kt; double ni;
 
 public:
     // Removi as referências (&) nos Vector3d para evitar que o C++ perca os dados de memória
-    triangle(Point3d a, Point3d b, Point3d c, Vector3d na, Vector3d nb, Vector3d nc, const color& ka, const color& kd, const color& ks, double ns)
-      : a(a), b(b), c(c), na(na), nb(nb), nc(nc), ka(ka), kd(kd), ks(ks), ns(ns) {}
+    triangle(Point3d a, Point3d b, Point3d c, Vector3d na, Vector3d nb, Vector3d nc, const color& ka, const color& kd, const color& ks, double ns, const color& kr, const color& kt, double ni)
+      : a(a), b(b), c(c), na(na), nb(nb), nc(nc), ka(ka), kd(kd), ks(ks), ns(ns), kr(kr), kt(kt), ni(ni) {}
     
     bool hit(const Ray& r, interval ray_t, hit_record& rec) const override 
     {
@@ -73,7 +74,9 @@ public:
         rec.kd = kd;
         rec.ks = ks;
         rec.ns = ns;
-        
+        rec.kr = kr;
+        rec.kt = kt;
+        rec.ni = ni;
         return true;
     }
 };

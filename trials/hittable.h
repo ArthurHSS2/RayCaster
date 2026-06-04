@@ -14,6 +14,9 @@ class hit_record {
       color ka; // Coeficiente Ambiente
       color kd; // Coeficiente Difuso (antiga 'col')
       color ks; // Coeficiente Especular
+      color kr; // Cor/Intensidade da reflexão
+      color kt; // Cor/Intensidade da transparência
+      double ni; // Índice de refração (IOR)
       double ns; // Brilho (eta na fórmula de Phong)
     
         void set_face_normal(const Ray& r, const Vector3d& outward_normal) {
