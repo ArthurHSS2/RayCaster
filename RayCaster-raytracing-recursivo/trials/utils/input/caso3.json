@@ -1,0 +1,65 @@
+{
+  "globalLight": [0.2, 0.2, 0.2],
+  "camera": {
+    "lookfrom": [0.0, 5.0, 25.0],
+    "lookat": [0.0, 5.0, 0.0],
+    "vup": [0.0, 1.0, 0.0],
+    "image_width": 600,
+    "image_height": 400,
+    "screen_distance": 1.0
+  },
+  "lights": [
+    {
+      "position": [0.0, 20.0, 15.0],
+      "color": [1.0, 1.0, 1.0],
+      "name": "Luz Frontal"
+    }
+  ],
+  "materials": {
+    "lente_vidro": {
+      "color": [0.0, 0.0, 0.0],
+      "ka": [0.0, 0.0, 0.0],
+      "ks": [0.5, 0.5, 0.5],
+      "kt": [0.95, 0.95, 0.95],
+      "ni": 1.52,
+      "ns": 500
+    },
+    "cubo_vermelho": {
+      "color": [0.9, 0.1, 0.1],
+      "ka": [0.9, 0.1, 0.1],
+      "ks": [0.2, 0.2, 0.2],
+      "ns": 50
+    },
+    "chao_fosco": {
+      "color": [0.3, 0.3, 0.3],
+      "ka": [0.3, 0.3, 0.3],
+      "ks": [0.0, 0.0, 0.0],
+      "ns": 10
+    }
+  },
+  "objects": [
+    {
+      "type": "plane",
+      "point_on_plane": [0.0, 0.0, 0.0],
+      "normal": [0.0, 1.0, 0.0],
+      "material": "chao_fosco"
+    },
+    {
+      "type": "sphere",
+      "relativePos": [0.0, 5.0, 5.0],
+      "radius": 4.0,
+      "material": "lente_vidro"
+    },
+    {
+      "type": "mesh",
+      "relativePos": [0.0, 0.0, 0.0],
+      "path": "cubo.obj",
+      "material": "cubo_vermelho",
+      "transform": [
+        { "type": "scaling", "data": [4.0, 8.0, 2.0] },
+        { "type": "rotation", "data": [0.0, 45.0, 0.0] },
+        { "type": "translation", "data": [0.0, 4.0, -10.0] }
+      ]
+    }
+  ]
+}
