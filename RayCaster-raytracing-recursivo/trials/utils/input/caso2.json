@@ -1,0 +1,67 @@
+{
+  "globalLight": [0.1, 0.1, 0.15],
+  "camera": {
+    "lookfrom": [0.0, 5.0, 15.0],
+    "lookat": [0.0, 3.0, 0.0],
+    "vup": [0.0, 1.0, 0.0],
+    "image_width": 600,
+    "image_height": 600,
+    "screen_distance": 1.0
+  },
+  "lights": [
+    {
+      "position": [10.0, 20.0, 10.0],
+      "color": [1.0, 1.0, 1.0],
+      "name": "Luz Superior Direita"
+    }
+  ],
+  "materials": {
+    "chao_espelho": {
+      "color": [0.05, 0.05, 0.05],
+      "ka": [0.05, 0.05, 0.05],
+      "ks": [0.1, 0.1, 0.1],
+      "kr": [0.8, 0.8, 0.9],
+      "ns": 500
+    },
+    "macaco_dourado": {
+      "color": [0.8, 0.6, 0.1],
+      "ka": [0.8, 0.6, 0.1],
+      "ks": [0.9, 0.9, 0.9],
+      "kr": [0.1, 0.1, 0.1],
+      "ns": 250
+    },
+    "esfera_vidro": {
+      "color": [0.0, 0.0, 0.0],
+      "ka": [0.0, 0.0, 0.0],
+      "ks": [0.2, 0.2, 0.2],
+      "kt": [0.95, 0.95, 0.95],
+      "ni": 1.52,
+      "ns": 200
+    }
+  },
+  "objects": [
+    {
+      "type": "plane",
+      "point_on_plane": [0.0, 0.0, 0.0],
+      "normal": [0.0, 1.0, 0.0],
+      "material": "chao_espelho"
+    },
+    {
+      "type": "mesh",
+      "relativePos": [0.0, 0.0, 0.0],
+      "path": "monkey.obj",
+      "material": "macaco_dourado",
+      "transform": [
+        { "type": "scaling", "data": [1.5, 1.5, 1.5] },
+        { "type": "rotation", "data": [0.0, 35.0, 0.0] },
+        { "type": "translation", "data": [-3.0, 1.5, 0.0] }
+      ]
+    },
+    {
+      "type": "sphere",
+      "relativePos": [2.5, 2.0, 2.0],
+      "radius": 2.0,
+      "material": "esfera_vidro"
+    }
+  ]
+}
